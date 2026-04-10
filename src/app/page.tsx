@@ -5,6 +5,7 @@ import Image from "next/image";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
+import carImage from "../../public/car_transparent.png";
 
 if (typeof window !== "undefined") {
   gsap.registerPlugin(ScrollTrigger, useGSAP);
@@ -122,7 +123,7 @@ export default function Home() {
           {/* Using a standard img tag because next/image transforms can sometimes conflict with GSAP transforms unless configured carefully */}
           <img
             ref={carRef}
-            src="/car_transparent.png"
+            src={carImage.src}
             alt="car"
             className="absolute left-0 top-1/2 -translate-y-1/2 h-[150px] w-auto lg:h-[180px] z-30 drop-shadow-2xl object-contain"
           />
